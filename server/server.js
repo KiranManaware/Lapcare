@@ -3,12 +3,16 @@ const connectDB = require('./config/db_config');
 const errorHandler = require('./middlewares/errorHandler');
 const app=express();
 require("dotenv").config();
+const cors=require('cors');
 const PORT=process.env.PORT||3000;
 
 //Body-parser
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 
+
+//Cors enables
+app.use(cors())
 
 
 // db connection
