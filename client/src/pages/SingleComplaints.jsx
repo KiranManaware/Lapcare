@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import BackButton from "../components/BackButton";
 import { useDispatch, useSelector } from "react-redux";
 import {  getComplaint,closeComplaint } from "../features/complaint/complaintSlice";
 import { toast } from "react-toastify";
 import Loader from "../components/Loader";
-import { useParams } from "react-router-dom";
-import Comment from "../components/comment";
 import { getComments, raiseComment } from "../features/comment/commentSlice";
+import Comment from "../components/Comment";
 
 const SingleComplaints = () => {
   const { singleComplaint, isLoading, isSuccess, isError, message } =useSelector((state) => state.complaint);

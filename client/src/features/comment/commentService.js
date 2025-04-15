@@ -10,7 +10,7 @@ const fetchComments=async(id,token)=>{
     const response=await axios.get(`/api/complaints/${id}/comment`,options);
     return response.data;
 
-
+    
 }
 const addComment=async(fromData,token)=>{
     const options={
