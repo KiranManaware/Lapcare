@@ -1,1 +1,1 @@
-export const API_URL="https://lapcare.onrender.com/";
+export const API_URL="https://lapcare.onrender.com";
