@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended:true}))
 
 
 //Cors enables
-app.use(cors())
+app.use(cors({allwOrigin:"*"}))
 
 
 // db connection
