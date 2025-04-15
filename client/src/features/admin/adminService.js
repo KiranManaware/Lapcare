@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API_URL } from "../../../config";
 
 const fetchAllUsers=async(token)=>{
     const options={
@@ -6,7 +7,7 @@ const fetchAllUsers=async(token)=>{
             authorization:`Bearer ${token}`
         }
     }
-    const response=await axios.get('/api/admin/users',options);
+    const response=await axios.get(`${API_URL}/api/admin/users`,options);
     console.log(response.data)
     return response.data
 }
@@ -17,7 +18,7 @@ const fetchAllComplaints=async(token)=>{
             authorization:`Bearer ${token}`
         }
     }
-    const response=await axios.get('/api/admin/complaints',options);    
+    const response=await axios.get(`${API_URL}/api/admin/complaints`,options);    
     return response.data
 }
 
@@ -27,7 +28,7 @@ const fetchAllComments=async(token)=>{
             authorization:`Bearer ${token}`
         }
     }
-    const response=await axios.get('/api/admin/comments',options);    
+    const response=await axios.get(`${API_URL}/api/admin/comments`,options);    
     return response.data
 }
 
